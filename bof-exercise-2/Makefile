@@ -1,6 +1,6 @@
 OV = bof1/bof1 bof2/bof2 bof3/main
 PROGRAMS = $(OV)
-CFLAGS += -g -fno-stack-protector -zexecstack
+CFLAGS += -no-pie -m32 -mpreferred-stack-boundary=2 -fno-stack-protector -zexecstack
 
 # Convenience to auto-call mcheck before the first malloc()
 #CFLAGS += -lmcheck
