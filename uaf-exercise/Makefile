@@ -1,4 +1,4 @@
-OV = uaf-example
+OV = uaf-example uaf0
 PROGRAMS = $(OV)
 CFLAGS += -g -fno-stack-protector -zexecstack
 
