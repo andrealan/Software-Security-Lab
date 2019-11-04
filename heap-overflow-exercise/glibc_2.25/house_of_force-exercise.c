@@ -4,7 +4,10 @@
 #include <stdint.h>
 #include <malloc.h>
 
-
+void win()
+{
+  printf("Congratulations, you win!!! You successfully changed the code flow\n");
+}
 
 int main(int argc, char *argv[])
 {
@@ -13,6 +16,8 @@ int main(int argc, char *argv[])
    int real_size ;
 
    if(argc != 4) return 0;
+  
+   printf("The goal of this attack is to execute the win function!!!\n") ;
 
    buf1 = malloc(256) ;
    strcpy(buf1, argv[1]) ;
