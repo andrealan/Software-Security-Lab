@@ -19,10 +19,8 @@ int main()
   char big_string[128];
   int i;
 
-  for(i=0; i < 128; i++)  // Loop 128 times
-  {
-    big_string[i] = 'A'; // And fill big_string with 'A's
-  }
+  gets(big_string) ;
+  big_string[128] = '\0';
   overflow_function(big_string);
   exit(0);
 }

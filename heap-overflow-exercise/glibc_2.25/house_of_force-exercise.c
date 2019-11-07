@@ -31,9 +31,9 @@ int main(int argc, char *argv[])
    buf3 = malloc(256) ;
    strcpy(buf3, argv[3]) ;
 
-   free(buf3) ;
-   free(buf2) ;
-   free(buf1) ;
+   //free(buf3) ;
+   //free(buf2) ;
+   //free(buf1) ;
 
    return 0;
 
