@@ -5,7 +5,7 @@
 
 void winner()
 {
-  puts("\nk33p_c4lm_1_fr33d_m3m0ry_w3_4r3_53cur3_n0w\n");
+  puts("\nKeep Calm and Free The memory\n");
   exit(0);
 }
 
@@ -70,7 +70,7 @@ int main()
       fgets(leak,12,stdin);
       addr = atoi(leak);
       printf("\n%s\n",addr);
-      puts("Now insert s3cr3t: ");
+      puts("Now insert Secret: ");
       fgets(input,9, stdin);
       crypt(input,k,keyinput);
       if (check_keys(keyinput,secret))

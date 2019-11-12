@@ -1,0 +1,21 @@
+solution uaf0.c
+
+Goal:
+
+The program generates the random key and it saved it on the heap at different position.
+Then the program free such allocation. 
+
+By using memory leak through the function the attacker can still use the
+previous free allocated memory and try to extract the key from the memory and
+use it. (Use after Free)
+
+
+Soluzione:
+
+* Provide the address of the memory allocated memory by malloc + 16 that should still
+  contain a valid copy of the secret. 
+
+* When the program ask the address compute the pointer to the allocate memory
+  0x804B008 + 0x10 (16) and insert the integer value = 134524952, then insert
+the key printed on the screen.
+
