@@ -1,7 +1,11 @@
-simple-rop: simple-rop.c
-	gcc -m32 -O0 -g -static -fno-stack-protector $^ -o $@
+OV = simple-rop rop-ex1
+PROGRAMS = $(OV)
+CFLAGS += -no-pie -m32 -mpreferred-stack-boundary=2 -fno-stack-protector -zexecstack
 
-.PHONY: clean
+# Convenience to auto-call mcheck before the first malloc()
+#CFLAGS += -lmcheck
 
+all: $(PROGRAMS)
 clean:
-	rm -rf simple-rop
+	rm -f $(PROGRAMS)
+

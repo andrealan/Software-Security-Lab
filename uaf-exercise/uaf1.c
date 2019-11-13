@@ -6,17 +6,18 @@
 void free_memory(char *secret){ free(secret) ; }
 
 
-char *input print_input(){
+get_input(char *str){
 
-	char print[20] ;
+	char p[20] ;
 
-	gets(input) ;
-	strcpy(print, input) ;
-	printf("%s\n", input) ;
+	gets(str) ;
+	strcpy(p, str) ;
+	printf("%s\n", p) ;
+
 
 }
 
-void build_secret(int *k)
+void build_secret(char *k)
 {
   int i;
   for (i=0; i<7; i++)
@@ -29,7 +30,7 @@ void build_secret(int *k)
 
 int main(int argc, char *argv[]){
 
- char *secret, input_secret ;
+ char *secret, *input_secret ;
  char input[120] ;
 
 
@@ -37,7 +38,7 @@ int main(int argc, char *argv[]){
  	secret = malloc(24) ;
 	build_secret(secret) ;
 
-	input =	get_input(str) ;
+	get_input(input) ;
 	input_secret = malloc(24) ;
 
 	if(!strcmp(input_secret, secret))

@@ -10,7 +10,7 @@ char str3[] = "                           " ;
 
 void join_string(char *dst, char *src) 
 {
-	str3 = strcat(dst, src) ;
+	strcat(dst, src) ;
 }
 
 void win()
@@ -28,5 +28,4 @@ int main(int argc, char **argv)
 
   printf("%s\n", buffer) ;
 
-  }
 }
