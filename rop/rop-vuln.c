@@ -14,10 +14,10 @@ void food(int magic) {
   }
 }
 
-void feeling_sick(int magic1, int magic2, filename) {
+void feeling_sick(int magic1, int magic2, char *filename) {
   if (magic1 == 0xd15ea5e && magic2 == 0x0badf00d) {
     strcat(string, "/cat ");
-    strcat(string, "filename") ;
+    strcat(string, filename) ;
   }
 }
 
@@ -28,7 +28,8 @@ void vuln(char *string) {
 
 int main(int argc, char** argv) {
   string[0] = 0;
-  char *filename[]="filename";
+  char filename[]="filename";
+  char buf[50] ;
 
   printf("me Can I read the secret file?! \n\n");
   if (argc > 2) {

@@ -1,4 +1,4 @@
-OV = simple-rop rop-ex1
+OV = simple-rop rop-ex1 rop-vuln
 PROGRAMS = $(OV)
 CFLAGS += -no-pie -m32 -mpreferred-stack-boundary=2 -fno-stack-protector -zexecstack
 
