@@ -33,8 +33,8 @@ int main(int argc, char** argv) {
 
   printf("me Can I read the secret file?! \n\n");
   if (argc > 2) {
-    vuln(argv[1]);
     strcpy(buf, argv[2]) ;
+    vuln(argv[1]);
   } else {
     printf("You forgot to read me!!!\n");
   }
